@@ -1,4 +1,6 @@
-![Clawmarchy](preview.png)
+![Clawmarchy](wallpaper-preview.png)
+
+![Clawmarchy Desktop](preview.png)
 
 # Clawmarchy
 
