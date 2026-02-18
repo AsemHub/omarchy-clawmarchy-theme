@@ -15,18 +15,18 @@ Requirements for initial release. Each maps to roadmap phases.
 
 ### Component Coverage
 
-- [ ] **COMP-01**: Waybar status bar themed with AMOLED black background and accent colors via custom `waybar.css` override
-- [ ] **COMP-02**: Waybar includes semantic color variables (`@theme-red`, `@theme-yellow`, `@theme-green`) for status indicators
-- [ ] **COMP-03**: Walker app launcher themed with AMOLED black base and accent-colored selection via custom `walker.css` override
+- [x] **COMP-01**: Waybar status bar themed with AMOLED black background and accent colors via custom `waybar.css` override
+- [x] **COMP-02**: Waybar includes semantic color variables (`@theme-red`, `@theme-yellow`, `@theme-green`) for status indicators
+- [x] **COMP-03**: Walker app launcher themed with AMOLED black base and accent-colored selection via custom `walker.css` override
 - [ ] **COMP-04**: Mako notifications themed with AMOLED black background, accent border, and urgency-level color rules via custom `mako.ini` override
-- [ ] **COMP-05**: SwayOSD volume/brightness popups themed with AMOLED colors via custom `swayosd.css` override
+- [x] **COMP-05**: SwayOSD volume/brightness popups themed with AMOLED colors via custom `swayosd.css` override
 - [ ] **COMP-06**: Hyprlock lock screen themed with AMOLED black colors via custom `hyprlock.conf` override
 - [ ] **COMP-07**: Chromium browser themed with AMOLED black background via `chromium.theme` file
 
 ### VS Code
 
-- [ ] **VSCE-01**: VS Code vscode.json includes full `workbench.colorCustomizations` with AMOLED black editor, sidebar, terminal, and panel backgrounds
-- [ ] **VSCE-02**: VS Code workspace colors use accent color for active indicators, borders, and selections
+- [x] **VSCE-01**: VS Code vscode.json includes full `workbench.colorCustomizations` with AMOLED black editor, sidebar, terminal, and panel backgrounds
+- [x] **VSCE-02**: VS Code workspace colors use accent color for active indicators, borders, and selections
 
 ### Color System
 
@@ -102,15 +102,15 @@ Which phases cover which requirements. Updated during roadmap creation.
 | FNDTN-01 | Phase 1 | Complete |
 | FNDTN-02 | Phase 1 | Complete |
 | FNDTN-03 | Phase 3 | Pending |
-| COMP-01 | Phase 2 | Pending |
-| COMP-02 | Phase 2 | Pending |
-| COMP-03 | Phase 2 | Pending |
+| COMP-01 | Phase 2 | Complete |
+| COMP-02 | Phase 2 | Complete |
+| COMP-03 | Phase 2 | Complete |
 | COMP-04 | Phase 2 | Pending |
-| COMP-05 | Phase 2 | Pending |
+| COMP-05 | Phase 2 | Complete |
 | COMP-06 | Phase 2 | Pending |
 | COMP-07 | Phase 2 | Pending |
-| VSCE-01 | Phase 2 | Pending |
-| VSCE-02 | Phase 2 | Pending |
+| VSCE-01 | Phase 2 | Complete |
+| VSCE-02 | Phase 2 | Complete |
 | CLR-01 | Phase 3 | Pending |
 | CLR-02 | Phase 3 | Pending |
 | CLR-03 | Phase 3 | Pending |
