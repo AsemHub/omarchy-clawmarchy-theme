@@ -1,0 +1,11 @@
+/* Clawmarchy AMOLED Dark Theme - SwayOSD
+ * Static override -- replaces template-generated swayosd.css
+ * Source: colors.toml values hardcoded
+ */
+
+/* === Color Variables (required by Omarchy SwayOSD structural CSS) === */
+@define-color background-color #000000;  /* colors.toml: background */
+@define-color border-color #E8E0D0;      /* colors.toml: foreground */
+@define-color label #E8E0D0;             /* colors.toml: foreground */
+@define-color image #E8E0D0;             /* colors.toml: foreground */
+@define-color progress #7B6CBD;          /* colors.toml: accent */

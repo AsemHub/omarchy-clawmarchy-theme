@@ -1,0 +1,12 @@
+/* Clawmarchy AMOLED Dark Theme - Walker
+ * Static override -- replaces template-generated walker.css
+ * Source: colors.toml values hardcoded
+ */
+
+/* === Color Variables (required by Omarchy Walker theme CSS) === */
+@define-color selected-text #7B6CBD;   /* colors.toml: accent */
+@define-color text #E8E0D0;           /* colors.toml: foreground */
+@define-color base #000000;            /* colors.toml: background */
+@define-color border #7B6CBD;          /* colors.toml: accent (accent border on search) */
+@define-color foreground #E8E0D0;      /* colors.toml: foreground */
+@define-color background #000000;      /* colors.toml: background */
