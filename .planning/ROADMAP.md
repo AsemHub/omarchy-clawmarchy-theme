@@ -12,7 +12,7 @@ Clawmarchy expands from a partial theme (Hyprland, btop, Neovim, VS Code referen
 
 Decimal phases appear between their surrounding integers in numeric order.
 
-- [ ] **Phase 1: Hyprland Foundation Fix** - Replace global opacity catch-all with targeted window and layer rules
+- [x] **Phase 1: Hyprland Foundation Fix** - Replace global opacity catch-all with targeted window and layer rules (completed 2026-02-18)
 - [ ] **Phase 2: Desktop Component Coverage** - Theme all visible desktop elements (Waybar, Walker, Mako, SwayOSD, Hyprlock, Chromium, VS Code)
 - [ ] **Phase 3: Color System Traceability** - Audit and document every hardcoded hex value across all config files
 - [ ] **Phase 4: Accent Variants and Wallpapers** - Ship 3+ pre-built accent color variants and expand wallpaper collection
@@ -99,7 +99,7 @@ Phases execute in numeric order: 1 -> 2 -> 3 -> 4 -> 5
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Hyprland Foundation Fix | 0/1 | Not started | - |
+| 1. Hyprland Foundation Fix | 0/1 | Complete    | 2026-02-18 |
 | 2. Desktop Component Coverage | 0/? | Not started | - |
 | 3. Color System Traceability | 0/? | Not started | - |
 | 4. Accent Variants and Wallpapers | 0/? | Not started | - |
