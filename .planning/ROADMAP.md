@@ -43,11 +43,12 @@ Plans:
   3. Mako notifications appear with AMOLED black background, accent-colored border, and distinct colors for low/normal/critical urgency levels
   4. SwayOSD volume and brightness popups, Hyprlock lock screen, and Chromium browser all display AMOLED black backgrounds consistent with the theme
   5. VS Code shows AMOLED black across editor, sidebar, terminal, and panel backgrounds with accent-colored active indicators and borders
-**Plans**: TBD
+**Plans**: 3 plans
 
 Plans:
-- [ ] 02-01: TBD
-- [ ] 02-02: TBD
+- [ ] 02-01-PLAN.md — Waybar, Walker, and SwayOSD GTK CSS theme overrides (AMOLED black + accent)
+- [ ] 02-02-PLAN.md — Mako notifications, Hyprlock lock screen, and Chromium browser theme overrides
+- [ ] 02-03-PLAN.md — VS Code workbench.colorCustomizations with AMOLED black and accent indicators
 
 ### Phase 3: Color System Traceability
 **Goal**: Every hardcoded hex value in every theme file is documented with its colors.toml source key, and the boundary between Omarchy-generated and static override files is clearly established
@@ -100,7 +101,7 @@ Phases execute in numeric order: 1 -> 2 -> 3 -> 4 -> 5
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
 | 1. Hyprland Foundation Fix | 0/1 | Complete    | 2026-02-18 |
-| 2. Desktop Component Coverage | 0/? | Not started | - |
+| 2. Desktop Component Coverage | 0/3 | Not started | - |
 | 3. Color System Traceability | 0/? | Not started | - |
 | 4. Accent Variants and Wallpapers | 0/? | Not started | - |
 | 5. Documentation and Preview | 0/? | Not started | - |
