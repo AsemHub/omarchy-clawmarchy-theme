@@ -32,7 +32,7 @@ Requirements for initial release. Each maps to roadmap phases.
 
 - [x] **CLR-01**: All static override files that hardcode hex values include comments documenting which colors.toml key each value corresponds to
 - [x] **CLR-02**: Audit identifies which theme files are Omarchy-generated (no maintenance) vs static overrides (must be manually updated when accent changes)
-- [ ] **CLR-03**: Audit results documented in a color traceability section in README or dedicated reference
+- [x] **CLR-03**: Audit results documented in a color traceability section in README or dedicated reference
 
 ### Accent Variants
 
@@ -113,7 +113,7 @@ Which phases cover which requirements. Updated during roadmap creation.
 | VSCE-02 | Phase 2 | Complete |
 | CLR-01 | Phase 3 | Complete |
 | CLR-02 | Phase 3 | Complete |
-| CLR-03 | Phase 3 | Pending |
+| CLR-03 | Phase 3 | Complete |
 | VAR-01 | Phase 4 | Pending |
 | VAR-02 | Phase 4 | Pending |
 | VAR-03 | Phase 4 | Pending |
