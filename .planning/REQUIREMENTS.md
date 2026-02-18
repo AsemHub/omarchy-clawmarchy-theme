@@ -9,8 +9,8 @@ Requirements for initial release. Each maps to roadmap phases.
 
 ### Foundation
 
-- [ ] **FNDTN-01**: Hyprland opacity uses targeted window class rules instead of global catch-all, so transparency-dependent apps and layer surfaces work correctly
-- [ ] **FNDTN-02**: Hyprland uses `layerrule` for layer surfaces (Waybar, notifications) instead of `windowrule`
+- [x] **FNDTN-01**: Hyprland opacity uses targeted window class rules instead of global catch-all, so transparency-dependent apps and layer surfaces work correctly
+- [x] **FNDTN-02**: Hyprland uses `layerrule` for layer surfaces (Waybar, notifications) instead of `windowrule`
 - [ ] **FNDTN-03**: Color hex values in all static override files have source comments mapping them to their colors.toml key names
 
 ### Component Coverage
@@ -99,8 +99,8 @@ Which phases cover which requirements. Updated during roadmap creation.
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| FNDTN-01 | Phase 1 | Pending |
-| FNDTN-02 | Phase 1 | Pending |
+| FNDTN-01 | Phase 1 | Complete |
+| FNDTN-02 | Phase 1 | Complete |
 | FNDTN-03 | Phase 3 | Pending |
 | COMP-01 | Phase 2 | Pending |
 | COMP-02 | Phase 2 | Pending |
