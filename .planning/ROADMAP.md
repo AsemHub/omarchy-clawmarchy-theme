@@ -58,10 +58,11 @@ Plans:
   1. Every static override file that contains hardcoded hex values has inline comments identifying which colors.toml key each value corresponds to
   2. A documented audit distinguishes which theme files are Omarchy-generated (maintained by the template engine) versus static overrides (must be manually updated when accent changes)
   3. Audit results are published in a reference document accessible to users and future contributors
-**Plans**: TBD
+**Plans**: 2 plans
 
 Plans:
-- [ ] 03-01: TBD
+- [ ] 03-01-PLAN.md — Inline color source annotations and file classification headers for all config files
+- [ ] 03-02-PLAN.md — COLORS.md reference document with accent change guide and per-file audit
 
 ### Phase 4: Accent Variants and Wallpapers
 **Goal**: Users can choose from at least 3 pre-built accent color alternatives beyond the default purple, each with verified contrast and consistent theming, alongside an expanded wallpaper collection
@@ -102,6 +103,6 @@ Phases execute in numeric order: 1 -> 2 -> 3 -> 4 -> 5
 |-------|----------------|--------|-----------|
 | 1. Hyprland Foundation Fix | 0/1 | Complete    | 2026-02-18 |
 | 2. Desktop Component Coverage | 3/3 | Complete | 2026-02-18 |
-| 3. Color System Traceability | 0/? | Not started | - |
+| 3. Color System Traceability | 0/2 | Not started | - |
 | 4. Accent Variants and Wallpapers | 0/? | Not started | - |
 | 5. Documentation and Preview | 0/? | Not started | - |
