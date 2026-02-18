@@ -11,8 +11,8 @@ See: .planning/PROJECT.md (updated 2026-02-18)
 
 Phase: 2 of 5 (Desktop Component Coverage)
 Plan: 3 of 3 in current phase
-Status: Plan 02-02 complete
-Last activity: 2026-02-18 -- Completed 02-02 Mako/Hyprlock/Chromium
+Status: Phase 2 complete (3/3 plans done)
+Last activity: 2026-02-18 -- Completed 02-03 VS Code theme (phase 2 done)
 
 Progress: [##........] 20%
 
@@ -52,6 +52,8 @@ Recent decisions affecting current work:
 - 30 VS Code colorCustomizations covering all major surfaces for comprehensive AMOLED black (02-03)
 - GTK CSS @define-color static override pattern established for Waybar, Walker, SwayOSD (02-01)
 - Waybar semantic colors mapped: color1->theme-red, color2->theme-green, color3->theme-yellow (02-01)
+- Mako border-size=3 full border as closest approximation to left-edge stripe (02-02)
+- Hyprlock wallpaper dimming via additive background block with rgba(0,0,0,0.45) overlay (02-02)
 
 ### Pending Todos
 
@@ -65,5 +67,5 @@ None yet.
 ## Session Continuity
 
 Last session: 2026-02-18
-Stopped at: Completed 02-01-PLAN.md
-Resume file: .planning/phases/02-desktop-component-coverage/02-01-SUMMARY.md
+Stopped at: Completed 02-03-PLAN.md (phase 2 complete)
+Resume file: .planning/phases/02-desktop-component-coverage/02-03-SUMMARY.md
