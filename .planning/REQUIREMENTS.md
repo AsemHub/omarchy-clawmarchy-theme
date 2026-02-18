@@ -11,7 +11,7 @@ Requirements for initial release. Each maps to roadmap phases.
 
 - [x] **FNDTN-01**: Hyprland opacity uses targeted window class rules instead of global catch-all, so transparency-dependent apps and layer surfaces work correctly
 - [x] **FNDTN-02**: Hyprland uses `layerrule` for layer surfaces (Waybar, notifications) instead of `windowrule`
-- [ ] **FNDTN-03**: Color hex values in all static override files have source comments mapping them to their colors.toml key names
+- [x] **FNDTN-03**: Color hex values in all static override files have source comments mapping them to their colors.toml key names
 
 ### Component Coverage
 
@@ -30,8 +30,8 @@ Requirements for initial release. Each maps to roadmap phases.
 
 ### Color System
 
-- [ ] **CLR-01**: All static override files that hardcode hex values include comments documenting which colors.toml key each value corresponds to
-- [ ] **CLR-02**: Audit identifies which theme files are Omarchy-generated (no maintenance) vs static overrides (must be manually updated when accent changes)
+- [x] **CLR-01**: All static override files that hardcode hex values include comments documenting which colors.toml key each value corresponds to
+- [x] **CLR-02**: Audit identifies which theme files are Omarchy-generated (no maintenance) vs static overrides (must be manually updated when accent changes)
 - [ ] **CLR-03**: Audit results documented in a color traceability section in README or dedicated reference
 
 ### Accent Variants
@@ -101,7 +101,7 @@ Which phases cover which requirements. Updated during roadmap creation.
 |-------------|-------|--------|
 | FNDTN-01 | Phase 1 | Complete |
 | FNDTN-02 | Phase 1 | Complete |
-| FNDTN-03 | Phase 3 | Pending |
+| FNDTN-03 | Phase 3 | Complete |
 | COMP-01 | Phase 2 | Complete |
 | COMP-02 | Phase 2 | Complete |
 | COMP-03 | Phase 2 | Complete |
@@ -111,8 +111,8 @@ Which phases cover which requirements. Updated during roadmap creation.
 | COMP-07 | Phase 2 | Complete |
 | VSCE-01 | Phase 2 | Complete |
 | VSCE-02 | Phase 2 | Complete |
-| CLR-01 | Phase 3 | Pending |
-| CLR-02 | Phase 3 | Pending |
+| CLR-01 | Phase 3 | Complete |
+| CLR-02 | Phase 3 | Complete |
 | CLR-03 | Phase 3 | Pending |
 | VAR-01 | Phase 4 | Pending |
 | VAR-02 | Phase 4 | Pending |
