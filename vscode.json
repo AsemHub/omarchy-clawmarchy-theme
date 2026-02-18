@@ -2,8 +2,13 @@
   "name": "Tokyo Night",
   "extension": "enkia.tokyo-night",
   "_comment": "colorCustomizations are NOT auto-applied by Omarchy. To use: copy the [Tokyo Night] object from colorCustomizations below into your VS Code settings.json under workbench.colorCustomizations.",
+  "_comment_update": "Static override -- accent changes affect 5 values; must be manually applied to VS Code settings.json",
   "colorCustomizations": {
     "[Tokyo Night]": {
+      "_comment_backgrounds": "All #000000 values = colors.toml: background",
+      "_comment_foregrounds": "All #E8E0D0 values = colors.toml: foreground",
+      "_comment_accent": "#7B6CBD = colors.toml: accent; #7B6CBD40 = accent + 25% alpha; #7B6CBD30 = accent + 19% alpha",
+      "_comment_surfaces": "#111118 = colors.toml: color0 (dark surface); #2A2835 = colors.toml: color8 (dark border); #8A8598 = colors.toml: color7 (muted text)",
       "editor.background": "#000000",
       "editor.foreground": "#E8E0D0",
       "sideBar.background": "#000000",
