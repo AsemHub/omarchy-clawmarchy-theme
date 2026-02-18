@@ -28,10 +28,10 @@ Decimal phases appear between their surrounding integers in numeric order.
   1. Terminals and known applications display at full opacity via targeted window class rules (not a global catch-all)
   2. Layer surfaces (Waybar, notification popups) are not affected by window opacity rules -- they use dedicated layerrule directives
   3. Transparency-dependent applications (file managers, image viewers) are not forced to full opacity by a blanket rule
-**Plans**: TBD
+**Plans**: 1 plan
 
 Plans:
-- [ ] 01-01: TBD
+- [ ] 01-01-PLAN.md — Replace global opacity catch-all with override-based window rules and add dedicated layer surface rules
 
 ### Phase 2: Desktop Component Coverage
 **Goal**: Every visible desktop surface -- status bar, launcher, notifications, volume/brightness popups, lock screen, browser, and editor -- is themed with AMOLED black and accent colors
@@ -99,7 +99,7 @@ Phases execute in numeric order: 1 -> 2 -> 3 -> 4 -> 5
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Hyprland Foundation Fix | 0/? | Not started | - |
+| 1. Hyprland Foundation Fix | 0/1 | Not started | - |
 | 2. Desktop Component Coverage | 0/? | Not started | - |
 | 3. Color System Traceability | 0/? | Not started | - |
 | 4. Accent Variants and Wallpapers | 0/? | Not started | - |
