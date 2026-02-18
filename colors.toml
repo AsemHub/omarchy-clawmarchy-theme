@@ -1,5 +1,7 @@
-# Clawmarchy AMOLED Dark Theme
-# Muted blue-violet purple on true black with warm off-white text
+# Clawmarchy Theme - Color Palette
+# Source of truth -- all other theme files reference these values
+# Omarchy's template engine reads this file to generate terminal colors
+# When changing values here, update all static override files (see COLORS.md)
 
 accent = "#7B6CBD"
 cursor = "#E8E0D0"

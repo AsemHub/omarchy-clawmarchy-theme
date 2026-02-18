@@ -1,6 +1,7 @@
 /* Clawmarchy AMOLED Dark Theme - Waybar
  * Static override -- replaces template-generated waybar.css
  * Source: colors.toml values hardcoded
+ * Update: Manual -- accent changes affect 2 values; palette changes affect all
  */
 
 /* === Color Variables (required by Omarchy structural style.css) === */
@@ -44,6 +45,6 @@
 
 /* Tooltip styling */
 tooltip {
-  background-color: #000000;
-  color: #E8E0D0;
+  background-color: #000000;            /* colors.toml: background */
+  color: #E8E0D0;                       /* colors.toml: foreground */
 }
