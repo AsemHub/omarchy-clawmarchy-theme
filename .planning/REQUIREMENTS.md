@@ -99,39 +99,39 @@ Which phases cover which requirements. Updated during roadmap creation.
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| FNDTN-01 | — | Pending |
-| FNDTN-02 | — | Pending |
-| FNDTN-03 | — | Pending |
-| COMP-01 | — | Pending |
-| COMP-02 | — | Pending |
-| COMP-03 | — | Pending |
-| COMP-04 | — | Pending |
-| COMP-05 | — | Pending |
-| COMP-06 | — | Pending |
-| COMP-07 | — | Pending |
-| VSCE-01 | — | Pending |
-| VSCE-02 | — | Pending |
-| CLR-01 | — | Pending |
-| CLR-02 | — | Pending |
-| CLR-03 | — | Pending |
-| VAR-01 | — | Pending |
-| VAR-02 | — | Pending |
-| VAR-03 | — | Pending |
-| VAR-04 | — | Pending |
-| VAR-05 | — | Pending |
-| ASST-01 | — | Pending |
-| ASST-02 | — | Pending |
-| ASST-03 | — | Pending |
-| DOC-01 | — | Pending |
-| DOC-02 | — | Pending |
-| DOC-03 | — | Pending |
-| DOC-04 | — | Pending |
+| FNDTN-01 | Phase 1 | Pending |
+| FNDTN-02 | Phase 1 | Pending |
+| FNDTN-03 | Phase 3 | Pending |
+| COMP-01 | Phase 2 | Pending |
+| COMP-02 | Phase 2 | Pending |
+| COMP-03 | Phase 2 | Pending |
+| COMP-04 | Phase 2 | Pending |
+| COMP-05 | Phase 2 | Pending |
+| COMP-06 | Phase 2 | Pending |
+| COMP-07 | Phase 2 | Pending |
+| VSCE-01 | Phase 2 | Pending |
+| VSCE-02 | Phase 2 | Pending |
+| CLR-01 | Phase 3 | Pending |
+| CLR-02 | Phase 3 | Pending |
+| CLR-03 | Phase 3 | Pending |
+| VAR-01 | Phase 4 | Pending |
+| VAR-02 | Phase 4 | Pending |
+| VAR-03 | Phase 4 | Pending |
+| VAR-04 | Phase 4 | Pending |
+| VAR-05 | Phase 4 | Pending |
+| ASST-01 | Phase 4 | Pending |
+| ASST-02 | Phase 4 | Pending |
+| ASST-03 | Phase 5 | Pending |
+| DOC-01 | Phase 5 | Pending |
+| DOC-02 | Phase 5 | Pending |
+| DOC-03 | Phase 5 | Pending |
+| DOC-04 | Phase 5 | Pending |
 
 **Coverage:**
 - v1 requirements: 27 total
-- Mapped to phases: 0
-- Unmapped: 27 (pending roadmap creation)
+- Mapped to phases: 27
+- Unmapped: 0
 
 ---
 *Requirements defined: 2026-02-18*
-*Last updated: 2026-02-18 after initial definition*
+*Last updated: 2026-02-18 after roadmap creation*
