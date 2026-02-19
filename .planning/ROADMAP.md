@@ -90,10 +90,11 @@ Plans:
   3. README includes a customization guide explaining how to change accent colors and swap wallpapers
   4. README documents compatibility requirements (Hyprland version, Omarchy version, required packages)
   5. Preview screenshot (preview.png) shows the full themed desktop with all new components visible
-**Plans**: TBD
+**Plans**: 2 plans
 
 Plans:
-- [ ] 05-01: TBD
+- [ ] 05-01-PLAN.md — README documentation expansion (TOC, Themed Components, Customization, Troubleshooting, Compatibility)
+- [ ] 05-02-PLAN.md — Preview screenshot (Ember variant full desktop screenshot)
 
 ## Progress
 
@@ -106,4 +107,4 @@ Phases execute in numeric order: 1 -> 2 -> 3 -> 4 -> 5
 | 2. Desktop Component Coverage | 3/3 | Complete | 2026-02-18 |
 | 3. Color System Traceability | 0/2 | Complete    | 2026-02-18 |
 | 4. Accent Variants and Wallpapers | 3/3 | Complete | 2026-02-19 |
-| 5. Documentation and Preview | 0/? | Not started | - |
+| 5. Documentation and Preview | 0/2 | Not started | - |
