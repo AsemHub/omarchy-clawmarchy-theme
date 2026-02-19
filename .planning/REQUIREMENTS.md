@@ -36,10 +36,10 @@ Requirements for initial release. Each maps to roadmap phases.
 
 ### Accent Variants
 
-- [ ] **VAR-01**: At least 3 pre-built accent color variants ship alongside the default purple (e.g., blue, teal, rose)
-- [ ] **VAR-02**: Each variant includes modified colors.toml with different accent and selection_background values
-- [ ] **VAR-03**: Each variant includes re-crafted btop.theme gradient mapping for the new accent hue
-- [ ] **VAR-04**: Each variant's accent color passes WCAG 4.5:1 contrast ratio against #000000 background
+- [x] **VAR-01**: At least 3 pre-built accent color variants ship alongside the default purple (e.g., blue, teal, rose)
+- [x] **VAR-02**: Each variant includes modified colors.toml with different accent and selection_background values
+- [x] **VAR-03**: Each variant includes re-crafted btop.theme gradient mapping for the new accent hue
+- [x] **VAR-04**: Each variant's accent color passes WCAG 4.5:1 contrast ratio against #000000 background
 - [ ] **VAR-05**: Variant installation is documented with clear instructions
 
 ### Assets
@@ -114,10 +114,10 @@ Which phases cover which requirements. Updated during roadmap creation.
 | CLR-01 | Phase 3 | Complete |
 | CLR-02 | Phase 3 | Complete |
 | CLR-03 | Phase 3 | Complete |
-| VAR-01 | Phase 4 | Pending |
-| VAR-02 | Phase 4 | Pending |
-| VAR-03 | Phase 4 | Pending |
-| VAR-04 | Phase 4 | Pending |
+| VAR-01 | Phase 4 | Complete |
+| VAR-02 | Phase 4 | Complete |
+| VAR-03 | Phase 4 | Complete |
+| VAR-04 | Phase 4 | Complete |
 | VAR-05 | Phase 4 | Pending |
 | ASST-01 | Phase 4 | Pending |
 | ASST-02 | Phase 4 | Pending |

@@ -104,5 +104,5 @@ Phases execute in numeric order: 1 -> 2 -> 3 -> 4 -> 5
 | 1. Hyprland Foundation Fix | 0/1 | Complete    | 2026-02-18 |
 | 2. Desktop Component Coverage | 3/3 | Complete | 2026-02-18 |
 | 3. Color System Traceability | 0/2 | Complete    | 2026-02-18 |
-| 4. Accent Variants and Wallpapers | 0/? | Not started | - |
+| 4. Accent Variants and Wallpapers | 1/2 | In Progress | - |
 | 5. Documentation and Preview | 0/? | Not started | - |

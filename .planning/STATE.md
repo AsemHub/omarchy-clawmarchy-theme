@@ -5,23 +5,23 @@
 See: .planning/PROJECT.md (updated 2026-02-18)
 
 **Core value:** Every visible element on an Omarchy desktop is consistently themed with AMOLED true black and the user's chosen accent color -- no gray wash, no mismatched apps, no manual config editing.
-**Current focus:** Phase 3: Color System Traceability
+**Current focus:** Phase 4: Accent Variants and Wallpapers
 
 ## Current Position
 
-Phase: 3 of 5 (Color System Traceability) -- COMPLETE
-Plan: 2 of 2 in current phase
-Status: Phase 03 complete (2/2 plans done)
-Last activity: 2026-02-18 -- Completed 03-02 COLORS.md reference document
+Phase: 4 of 5 (Accent Variants and Wallpapers)
+Plan: 1 of 2 in current phase
+Status: Plan 04-01 complete (variant config generation)
+Last activity: 2026-02-19 -- Completed 04-01 accent variant config generation
 
-Progress: [######....] 60%
+Progress: [#######...] 70%
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 6
+- Total plans completed: 7
 - Average duration: 2min
-- Total execution time: 0.17 hours
+- Total execution time: 0.22 hours
 
 **By Phase:**
 
@@ -30,9 +30,10 @@ Progress: [######....] 60%
 | 01-hyprland-foundation-fix | 1 | 1min | 1min |
 | 02-desktop-component-coverage | 3 | 3min | 1min |
 | 03-color-system-traceability | 2 | 6min | 3min |
+| 04-accent-variants-and-wallpapers | 1 | 3min | 3min |
 
 **Recent Trend:**
-- Last 5 plans: 03-02 (2min), 03-01 (4min), 01-01 (1min), 02-03 (1min), 02-01 (1min)
+- Last 5 plans: 04-01 (3min), 03-02 (2min), 03-01 (4min), 01-01 (1min), 02-03 (1min)
 - Trend: -
 
 *Updated after each plan completion*
@@ -61,6 +62,9 @@ Recent decisions affecting current work:
 - Greppable colors.toml: keyname pattern established across all file types (03-01)
 - Hybrid COLORS.md structure: quick reference first, detailed audit second (03-02)
 - Chromium.theme documented in COLORS.md only since file cannot contain comments (03-02)
+- Moss btop.theme temp_mid reset to default purple -- hue 153 below cyan 189 breaks cool-to-warm gradient (04-01)
+- 4-format accent substitution order: alpha-appended first, then hex, strip, decimal RGB (04-01)
+- Variant directory structure: variants/<name>/ with 9 accent-dependent config files (04-01)
 
 ### Pending Todos
 
@@ -74,5 +78,5 @@ None yet.
 ## Session Continuity
 
 Last session: 2026-02-19
-Stopped at: Phase 4 context gathered
-Resume file: .planning/phases/04-accent-variants-and-wallpapers/04-CONTEXT.md
+Stopped at: Completed 04-01-PLAN.md
+Resume file: .planning/phases/04-accent-variants-and-wallpapers/04-01-SUMMARY.md
