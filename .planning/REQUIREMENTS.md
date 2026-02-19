@@ -40,12 +40,12 @@ Requirements for initial release. Each maps to roadmap phases.
 - [x] **VAR-02**: Each variant includes modified colors.toml with different accent and selection_background values
 - [x] **VAR-03**: Each variant includes re-crafted btop.theme gradient mapping for the new accent hue
 - [x] **VAR-04**: Each variant's accent color passes WCAG 4.5:1 contrast ratio against #000000 background
-- [ ] **VAR-05**: Variant installation is documented with clear instructions
+- [x] **VAR-05**: Variant installation is documented with clear instructions
 
 ### Assets
 
-- [ ] **ASST-01**: Wallpaper collection expanded to at least 10 curated anime wallpapers
-- [ ] **ASST-02**: New wallpapers are dark atmospheric scenes that work aesthetically with any accent color variant (not tied to purple)
+- [x] **ASST-01**: Wallpaper collection expanded to at least 10 curated anime wallpapers
+- [x] **ASST-02**: New wallpapers are dark atmospheric scenes that work aesthetically with any accent color variant (not tied to purple)
 - [ ] **ASST-03**: Preview screenshot (preview.png) updated to reflect full themed desktop with new components
 
 ### Documentation
@@ -118,9 +118,9 @@ Which phases cover which requirements. Updated during roadmap creation.
 | VAR-02 | Phase 4 | Complete |
 | VAR-03 | Phase 4 | Complete |
 | VAR-04 | Phase 4 | Complete |
-| VAR-05 | Phase 4 | Pending |
-| ASST-01 | Phase 4 | Pending |
-| ASST-02 | Phase 4 | Pending |
+| VAR-05 | Phase 4 | Complete |
+| ASST-01 | Phase 4 | Complete |
+| ASST-02 | Phase 4 | Complete |
 | ASST-03 | Phase 5 | Pending |
 | DOC-01 | Phase 5 | Pending |
 | DOC-02 | Phase 5 | Pending |

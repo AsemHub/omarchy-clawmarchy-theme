@@ -9,19 +9,19 @@ See: .planning/PROJECT.md (updated 2026-02-18)
 
 ## Current Position
 
-Phase: 4 of 5 (Accent Variants and Wallpapers)
-Plan: 1 of 2 in current phase
-Status: Plan 04-01 complete (variant config generation)
-Last activity: 2026-02-19 -- Completed 04-01 accent variant config generation
+Phase: 4 of 5 (Accent Variants and Wallpapers) -- PHASE COMPLETE
+Plan: 2 of 2 in current phase (all plans complete)
+Status: Phase 04 complete -- ready for Phase 05
+Last activity: 2026-02-19 -- Completed 04-02 variant switching and wallpapers
 
-Progress: [#######...] 70%
+Progress: [########..] 80%
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 7
+- Total plans completed: 8
 - Average duration: 2min
-- Total execution time: 0.22 hours
+- Total execution time: 0.29 hours
 
 **By Phase:**
 
@@ -30,13 +30,14 @@ Progress: [#######...] 70%
 | 01-hyprland-foundation-fix | 1 | 1min | 1min |
 | 02-desktop-component-coverage | 3 | 3min | 1min |
 | 03-color-system-traceability | 2 | 6min | 3min |
-| 04-accent-variants-and-wallpapers | 1 | 3min | 3min |
+| 04-accent-variants-and-wallpapers | 2 | 7min | 3.5min |
 
 **Recent Trend:**
-- Last 5 plans: 04-01 (3min), 03-02 (2min), 03-01 (4min), 01-01 (1min), 02-03 (1min)
+- Last 5 plans: 04-02 (4min), 04-01 (3min), 03-02 (2min), 03-01 (4min), 01-01 (1min)
 - Trend: -
 
 *Updated after each plan completion*
+| Phase 04 P02 | 4min | 3 tasks | 11 files |
 
 ## Accumulated Context
 
@@ -65,6 +66,9 @@ Recent decisions affecting current work:
 - Moss btop.theme temp_mid reset to default purple -- hue 153 below cyan 189 breaks cool-to-warm gradient (04-01)
 - 4-format accent substitution order: alpha-appended first, then hex, strip, decimal RGB (04-01)
 - Variant directory structure: variants/<name>/ with 9 accent-dependent config files (04-01)
+- Wallpaper replacement strategy: 5 variant-paired anime scenes replace originals (user choice) (04-02)
+- Aspect-preserving QHD downscale to 2560x1396 to avoid distortion from non-16:9 source (04-02)
+- clawmarchy-variant script copies variant dir to root then runs omarchy-theme-set (04-02)
 
 ### Pending Todos
 
@@ -78,5 +82,5 @@ None yet.
 ## Session Continuity
 
 Last session: 2026-02-19
-Stopped at: Completed 04-01-PLAN.md
-Resume file: .planning/phases/04-accent-variants-and-wallpapers/04-01-SUMMARY.md
+Stopped at: Completed 04-02-PLAN.md (Phase 04 complete)
+Resume file: .planning/phases/04-accent-variants-and-wallpapers/04-02-SUMMARY.md
