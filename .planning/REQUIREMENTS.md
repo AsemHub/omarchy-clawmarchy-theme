@@ -46,7 +46,7 @@ Requirements for initial release. Each maps to roadmap phases.
 
 - [x] **ASST-01**: Wallpaper collection contains 5 variant-paired anime wallpapers
 - [x] **ASST-02**: New wallpapers are dark atmospheric scenes that work aesthetically with any accent color variant (not tied to purple)
-- [ ] **ASST-03**: Preview screenshot (preview.png) updated to reflect full themed desktop with new components
+- [x] **ASST-03**: Preview screenshot (preview.png) updated to reflect full themed desktop with new components
 
 ### Documentation
 
@@ -121,7 +121,7 @@ Which phases cover which requirements. Updated during roadmap creation.
 | VAR-05 | Phase 4 | Complete |
 | ASST-01 | Phase 4 | Complete |
 | ASST-02 | Phase 4 | Complete |
-| ASST-03 | Phase 5 | Pending |
+| ASST-03 | Phase 5 | Complete |
 | DOC-01 | Phase 5 | Complete |
 | DOC-02 | Phase 5 | Complete |
 | DOC-03 | Phase 5 | Complete |
