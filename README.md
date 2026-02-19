@@ -104,6 +104,72 @@ clawmarchy-variant <name>
 
 Run `clawmarchy-variant --list` to see all options.
 
+## Customization
+
+### Switching Variants
+
+Switch between the 6 pre-built accent colors:
+
+```
+clawmarchy-variant <name>
+```
+
+This copies the variant's config files to the theme root and runs `omarchy-theme-set` to apply changes. Reload Waybar and reopen apps to see the new accent color everywhere. See the [Accent Variants](#accent-variants) table above for available options.
+
+### Wallpapers
+
+Theme wallpapers are in the `backgrounds/` directory:
+
+| File | Scene | Paired Variant |
+|------|-------|----------------|
+| `1-sakura-cherry-blossoms.png` | Cherry blossom garden | sakura |
+| `2-ocean-midnight-harbor.png` | Midnight harbor | ocean |
+| `3-tide-underwater-shrine.png` | Underwater shrine | tide |
+| `4-ember-lantern-festival.png` | Lantern festival | ember |
+| `5-moss-forest-shrine.png` | Forest shrine | moss |
+
+QHD (2560x1440) versions are in `backgrounds/qhd/`. Add custom wallpapers by placing PNG files in the `backgrounds/` directory.
+
+## Troubleshooting
+
+### Windows look slightly gray instead of true black
+
+**Cause:** Omarchy's default opacity multiplier can override the theme's full-opacity setting.
+
+**Fix:** Run `hyprctl reload` to pick up the theme's opacity override. Check for conflicting rules in your personal config with `hyprctl getoption decoration:active_opacity`.
+
+### Lock screen or Waybar icons show missing characters
+
+**Cause:** JetBrainsMono Nerd Font is not installed.
+
+**Fix:** Install via `pacman -S ttf-jetbrains-mono-nerd` or Omarchy menu (Install > Style > Font).
+
+### Icons don't change after installing theme
+
+**Cause:** Icon theme not installed or needs a full logout/login.
+
+**Fix:** Ensure the Yaru icon theme is installed. Do a full logout/login (not just `hyprctl reload`).
+
+### VS Code still shows default Tokyo Night colors
+
+**Cause:** Omarchy does not auto-apply `vscode.json` colorCustomizations.
+
+**Fix:** Manually copy the `[Tokyo Night]` colorCustomizations block from `vscode.json` into VS Code's `settings.json`.
+
+### Some apps still show old accent color after variant switch
+
+**Cause:** Running apps cache their config at launch.
+
+**Fix:** Reload Waybar with `killall waybar && waybar &`, then reopen terminals and editors.
+
+## Compatibility
+
+- **Omarchy** 3.0 or later
+- **Hyprland/Wayland** (X11 not supported)
+- **JetBrainsMono Nerd Font** -- used by lock screen (included with Omarchy by default)
+- **Yaru-purple-dark icons** -- used by icon theme (included with Omarchy by default)
+- **VS Code with Tokyo Night extension** -- optional, for editor theming
+
 ## Palette
 
 ![#000000](https://img.shields.io/badge/-%23000000-000000?style=flat-square)
