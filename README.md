@@ -6,6 +6,19 @@
 
 AMOLED dark theme with 6 accent color variants and curated anime wallpapers for [Omarchy](https://omarchy.com).
 
+## Contents
+
+- [Install](#install)
+- [Features](#features)
+- [Themed Components](#themed-components)
+- [Accent Variants](#accent-variants)
+- [Customization](#customization)
+- [Troubleshooting](#troubleshooting)
+- [Compatibility](#compatibility)
+- [Palette](#palette)
+- [Credits](#credits)
+- [Switching Themes](#switching-themes)
+
 ## Install
 
 ```
@@ -21,6 +34,56 @@ omarchy-theme-install https://github.com/AsemHub/omarchy-clawmarchy-theme
 - **tokyonight-night Neovim** -- AMOLED black overrides for seamless integration
 - **Hyprland effects** -- purple borders, subtle shadows, smooth animations
 - **Yaru-purple-dark icons** -- consistent GTK icon set
+
+## Themed Components
+
+```
+clawmarchy/
+├── colors.toml              # Color palette (source of truth)
+├── hyprland.conf            # Window manager config
+├── waybar.css               # Status bar styling
+├── walker.css               # App launcher styling
+├── mako.ini                 # Notification styling
+├── swayosd.css              # Volume/brightness popups
+├── hyprlock.conf            # Lock screen config
+├── btop.theme               # System monitor gradients
+├── neovim.lua               # Neovim color overrides
+├── vscode.json              # VS Code workspace colors
+├── chromium.theme           # Browser toolbar color
+├── icons.theme              # GTK icon theme name
+├── clawmarchy-variant       # Variant switching script
+├── backgrounds/
+│   ├── 1-sakura-cherry-blossoms.png
+│   ├── 2-ocean-midnight-harbor.png
+│   ├── 3-tide-underwater-shrine.png
+│   ├── 4-ember-lantern-festival.png
+│   ├── 5-moss-forest-shrine.png
+│   └── qhd/                # QHD downscaled versions
+└── variants/
+    ├── ember/               # 9 config files per variant
+    ├── moss/
+    ├── ocean/
+    ├── sakura/
+    ├── tide/
+    └── yoru/
+```
+
+All config files except `colors.toml` are static overrides. See [COLORS.md](COLORS.md) for detailed color mapping.
+
+| File | Component | What It Controls |
+|------|-----------|------------------|
+| `colors.toml` | Color palette | All theme colors; read by Omarchy's template engine |
+| `hyprland.conf` | Hyprland | Window borders, opacity override, blur, shadows, animations |
+| `waybar.css` | Waybar | Status bar colors, accent highlights, battery/network status indicators |
+| `walker.css` | Walker | App launcher AMOLED background and accent search border |
+| `mako.ini` | Mako | Notification colors with urgency-based border differentiation |
+| `swayosd.css` | SwayOSD | Volume/brightness popup colors |
+| `hyprlock.conf` | Hyprlock | Lock screen colors, accent clock, wallpaper dimming overlay |
+| `btop.theme` | btop | System monitor color gradients (cyan-to-magenta load mapping) |
+| `neovim.lua` | Neovim | tokyonight-night AMOLED black background overrides |
+| `vscode.json` | VS Code | 30 workspace color customizations for AMOLED black surfaces |
+| `chromium.theme` | Chromium | Browser toolbar background color |
+| `icons.theme` | GTK icons | Yaru-purple-dark icon set |
 
 ## Accent Variants
 
