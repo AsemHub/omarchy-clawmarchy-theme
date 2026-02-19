@@ -1,0 +1,28 @@
+# Clawmarchy Theme - Color Palette
+# Source of truth -- all other theme files reference these values
+# Omarchy's template engine reads this file to generate terminal colors
+# When changing values here, update all static override files (see COLORS.md)
+
+accent = "#D4895A"
+cursor = "#E8E0D0"
+foreground = "#E8E0D0"
+background = "#000000"
+selection_foreground = "#E8E0D0"
+selection_background = "#D4895A"
+
+color0 = "#111118"
+color1 = "#C45B6E"
+color2 = "#6EA88E"
+color3 = "#C49B5A"
+color4 = "#6E8EC4"
+color5 = "#9B7BC8"
+color6 = "#5AA8B5"
+color7 = "#8A8598"
+color8 = "#2A2835"
+color9 = "#D47585"
+color10 = "#85C4A5"
+color11 = "#D4B572"
+color12 = "#85A5D4"
+color13 = "#B595DA"
+color14 = "#72C4CE"
+color15 = "#E8E0D0"

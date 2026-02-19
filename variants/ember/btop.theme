@@ -1,0 +1,90 @@
+# Clawmarchy btop theme - System Monitor Colors
+# Static override -- must be manually updated when accent/palette changes
+# Update: Manual -- accent changes affect 7 values, palette changes affect all
+# Cool-to-warm gradient: cyan/blue at low usage -> purple/magenta at high usage
+# True black background blends with terminal
+
+# Main background, empty for terminal default, need to be empty if you want transparent background
+theme[main_bg]="#000000"  # colors.toml: background
+
+# Main text color
+theme[main_fg]="#E8E0D0"  # colors.toml: foreground
+
+# Title color for boxes
+theme[title]="#E8E0D0"  # colors.toml: foreground
+
+# Highlight color for keyboard shortcuts
+theme[hi_fg]="#D4895A"  # colors.toml: accent
+
+# Background color of selected item in processes box
+theme[selected_bg]="#2A2835"  # colors.toml: color8
+
+# Foreground color of selected item in processes box
+theme[selected_fg]="#D4895A"  # colors.toml: accent
+
+# Color of inactive/disabled text
+theme[inactive_fg]="#2A2835"  # colors.toml: color8
+
+# Color of text appearing on top of graphs, i.e uptime and current network graph scaling
+theme[graph_text]="#E8E0D0"  # colors.toml: foreground
+
+# Background color of the percentage meters
+theme[meter_bg]="#111118"  # colors.toml: color0
+
+# Misc colors for processes box including mini cpu graphs, details memory graph and details status text
+theme[proc_misc]="#D4895A"  # colors.toml: accent
+
+# CPU, Memory, Network, Proc box outline colors
+# All use accent color: colors.toml: accent
+theme[cpu_box]="#D4895A"
+theme[mem_box]="#D4895A"
+theme[net_box]="#D4895A"
+theme[proc_box]="#D4895A"
+
+# Box divider line and small boxes line color
+theme[div_line]="#2A2835"  # colors.toml: color8
+
+# Temperature graph color (cool -> warm -> hot)
+theme[temp_start]="#5AA8B5"  # colors.toml: color6
+theme[temp_mid]="#D4895A"    # colors.toml: accent
+theme[temp_end]="#C45B6E"    # colors.toml: color1
+
+# CPU graph colors (cyan -> blue -> magenta) -- CORE GRADIENT
+theme[cpu_start]="#5AA8B5"  # colors.toml: color6
+theme[cpu_mid]="#6E8EC4"    # colors.toml: color4
+theme[cpu_end]="#9B7BC8"    # colors.toml: color5
+
+# Mem/Disk free meter (bright purple -> blue -> cyan)
+theme[free_start]="#B595DA"  # colors.toml: color13
+theme[free_mid]="#85A5D4"    # colors.toml: color12
+theme[free_end]="#72C4CE"    # colors.toml: color14
+
+# Mem/Disk cached meter (blue -> cyan -> bright cyan)
+theme[cached_start]="#6E8EC4"  # colors.toml: color4
+theme[cached_mid]="#5AA8B5"    # colors.toml: color6
+theme[cached_end]="#72C4CE"    # colors.toml: color14
+
+# Mem/Disk available meter (cyan -> blue -> purple)
+theme[available_start]="#72C4CE"  # colors.toml: color14
+theme[available_mid]="#85A5D4"    # colors.toml: color12
+theme[available_end]="#B595DA"    # colors.toml: color13
+
+# Mem/Disk used meter (cyan -> blue -> magenta) -- matches CPU gradient
+theme[used_start]="#5AA8B5"  # colors.toml: color6
+theme[used_mid]="#6E8EC4"    # colors.toml: color4
+theme[used_end]="#9B7BC8"    # colors.toml: color5
+
+# Download graph colors (cyan -> blue)
+theme[download_start]="#5AA8B5"  # colors.toml: color6
+theme[download_mid]="#6E8EC4"    # colors.toml: color4
+theme[download_end]="#85A5D4"    # colors.toml: color12
+
+# Upload graph colors (blue -> magenta)
+theme[upload_start]="#6E8EC4"  # colors.toml: color4
+theme[upload_mid]="#9B7BC8"    # colors.toml: color5
+theme[upload_end]="#B595DA"    # colors.toml: color13
+
+# Process box color gradient for threads, mem and cpu usage
+theme[process_start]="#5AA8B5"  # colors.toml: color6
+theme[process_mid]="#6E8EC4"    # colors.toml: color4
+theme[process_end]="#9B7BC8"    # colors.toml: color5

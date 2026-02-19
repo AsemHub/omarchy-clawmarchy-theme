@@ -1,0 +1,50 @@
+/* Clawmarchy AMOLED Dark Theme - Waybar
+ * Static override -- replaces template-generated waybar.css
+ * Source: colors.toml values hardcoded
+ * Update: Manual -- accent changes affect 2 values; palette changes affect all
+ */
+
+/* === Color Variables (required by Omarchy structural style.css) === */
+@define-color foreground #E8E0D0;      /* colors.toml: foreground */
+@define-color background #000000;      /* colors.toml: background */
+
+/* === Semantic Status Colors (COMP-02) === */
+@define-color theme-red #C45B6E;       /* colors.toml: color1 */
+@define-color theme-yellow #C49B5A;    /* colors.toml: color3 */
+@define-color theme-green #6EA88E;     /* colors.toml: color2 */
+
+/* === Accent Highlights === */
+
+/* Active workspace number highlighted with accent */
+#workspaces button.active {
+  color: #5AB5B5;                       /* colors.toml: accent */
+}
+
+/* Module icons in accent color */
+#battery,
+#network,
+#pulseaudio,
+#bluetooth,
+#cpu {
+  color: #5AB5B5;                       /* colors.toml: accent */
+}
+
+/* Battery warning/critical states use semantic colors */
+#battery.warning {
+  color: @theme-yellow;
+}
+
+#battery.critical {
+  color: @theme-red;
+}
+
+/* Clock text in foreground (no accent) */
+#clock {
+  color: @foreground;
+}
+
+/* Tooltip styling */
+tooltip {
+  background-color: #000000;            /* colors.toml: background */
+  color: #E8E0D0;                       /* colors.toml: foreground */
+}
