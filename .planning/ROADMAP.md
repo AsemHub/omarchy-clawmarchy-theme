@@ -73,11 +73,12 @@ Plans:
   2. Every accent variant passes WCAG 4.5:1 contrast ratio against #000000 background
   3. Wallpaper collection contains at least 10 curated anime wallpapers that are dark atmospheric scenes working aesthetically with any accent color (not tied to purple)
   4. Variant installation follows a documented, straightforward process
-**Plans**: 2 plans
+**Plans**: 3 plans
 
 Plans:
 - [x] 04-01-PLAN.md — Generate variant config files (5 accents + yoru restore) with WCAG contrast verification
 - [x] 04-02-PLAN.md — Variant switching script and wallpaper collection expansion
+- [ ] 04-03-PLAN.md — Gap closure: align wallpaper count docs and add Accent Variants section to README
 
 ### Phase 5: Documentation and Preview
 **Goal**: Users can understand, install, troubleshoot, and customize the theme through comprehensive documentation, and the preview screenshot reflects the fully themed desktop
