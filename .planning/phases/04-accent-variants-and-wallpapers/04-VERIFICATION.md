@@ -1,26 +1,16 @@
 ---
 phase: 04-accent-variants-and-wallpapers
-verified: 2026-02-19T20:30:00Z
-status: gaps_found
-score: 5/7 must-haves verified
-re_verification: false
-gaps:
-  - truth: "Wallpaper collection contains at least 10 curated anime wallpapers"
-    status: failed
-    reason: "User deliberately replaced original 5 wallpapers with 5 new Gemini-generated ones instead of adding alongside them. Total is 5, not 10. This satisfies ASST-02 (dark atmospheric scenes working with any accent) but fails ASST-01 (at least 10 wallpapers) and ROADMAP Success Criterion 3."
-    artifacts:
-      - path: "backgrounds/"
-        issue: "Contains 5 PNG files (1-sakura through 5-moss), not 10. The plan expected 6-10 added alongside 1-5 originals."
-    missing:
-      - "Either restore the 5 original wallpapers alongside the 5 new ones, OR update ROADMAP/REQUIREMENTS to formally reflect the accepted deviation (change ASST-01 to 5+ and SC3 to 5+). The deviation is documented in SUMMARY but not in REQUIREMENTS.md (ASST-01 still shows [x] Complete, which is inaccurate against its own definition)."
-  - truth: "Variant installation follows a documented, straightforward process (VAR-05 / SC4)"
-    status: partial
-    reason: "The clawmarchy-variant script self-documents via --list and is self-explanatory. However, README.md contains no mention of variant switching -- a user reading only the README would not know the clawmarchy-variant script exists. VAR-05 requires 'documented with clear instructions'; the README is the primary user-facing documentation."
-    artifacts:
-      - path: "README.md"
-        issue: "No section for accent variants, no mention of clawmarchy-variant script, no usage example. Features list still describes the theme as 'neon purple accents' only."
-    missing:
-      - "Add an 'Accent Variants' section to README.md documenting: available variants, the clawmarchy-variant <name> command, and the --list flag. This is a lightweight fix (5-10 lines)."
+verified: 2026-02-19T21:35:00Z
+status: passed
+score: 7/7 must-haves verified
+re_verification:
+  previous_status: gaps_found
+  previous_score: 5/7
+  gaps_closed:
+    - "ASST-01 wallpaper count — REQUIREMENTS.md and ROADMAP.md now say '5 variant-paired' (not 'at least 10')"
+    - "VAR-05 README documentation — README.md has Accent Variants section with variant table and clawmarchy-variant command"
+  gaps_remaining: []
+  regressions: []
 human_verification:
   - test: "Open each of the 5 wallpapers and verify they are dark atmospheric anime scenes, not accent-saturated"
     expected: "70-80% dark/black tones; accent color present but subtle; no text or watermarks; anime art style"
@@ -33,59 +23,89 @@ human_verification:
 # Phase 4: Accent Variants and Wallpapers Verification Report
 
 **Phase Goal:** Users can choose from at least 3 pre-built accent color alternatives beyond the default purple, each with verified contrast and consistent theming, alongside an expanded wallpaper collection
-**Verified:** 2026-02-19T20:30:00Z
-**Status:** gaps_found
-**Re-verification:** No — initial verification
+**Verified:** 2026-02-19T21:35:00Z
+**Status:** passed
+**Re-verification:** Yes — after plan 04-03 gap closure
+
+---
+
+## Re-Verification Summary
+
+Two gaps from the initial verification (2026-02-19T20:30:00Z, score 5/7) were targeted by plan 04-03:
+
+**Gap 1 (ASST-01 — wallpaper count):** CLOSED. REQUIREMENTS.md ASST-01 now reads "Wallpaper collection contains 5 variant-paired anime wallpapers" (commit `68bd2c3`). ROADMAP.md Phase 4 Success Criterion 3 now reads "5 variant-paired anime wallpapers" (same commit). No occurrence of "at least 10" remains in either file.
+
+**Gap 2 (VAR-05 — README documentation):** CLOSED. README.md now has an "Accent Variants" section (line 25) with a full variant table, the `clawmarchy-variant <name>` command, and a `--list` reference (commit `e5eae99`). "neon purple accents" replaced with "6 accent variants". Wallhaven credit replaced with "AI-generated via Google Gemini".
+
+No regressions found in the 5 truths that previously passed.
 
 ---
 
 ## Goal Achievement
 
-### Observable Truths (from ROADMAP Success Criteria)
+### Observable Truths
 
 | #  | Truth | Status | Evidence |
 |----|-------|--------|---------|
-| 1  | At least 3 accent variants installable alongside default purple, each with colors.toml and btop.theme | VERIFIED | 5 variants (sakura, ocean, tide, ember, moss) + yoru restore; each has 9 config files including colors.toml and btop.theme |
-| 2  | Every accent variant passes WCAG 4.5:1 contrast against #000000 | VERIFIED | Computed ratios: yoru 4.72, sakura 7.52, ocean 6.16, tide 8.71, ember 7.53, moss 7.65 — all pass |
-| 3  | Wallpaper collection contains at least 10 curated anime wallpapers | FAILED | Only 5 wallpapers exist in backgrounds/ (user replaced originals instead of adding) |
-| 4  | Variant installation follows a documented, straightforward process | PARTIAL | Script self-documents via --list; README has no mention of clawmarchy-variant |
-| 5  | 5 new accent variant directories exist with 9 config files each | VERIFIED | All 6 directories confirmed (5 new + yoru); each has exactly 9 files |
-| 6  | No leftover default purple in non-purple variant files | VERIFIED | 0 matches in sakura/ocean/tide/ember; moss has exactly 1 exception (btop.theme temp_mid, documented) |
-| 7  | Users can switch variants with a single command | VERIFIED | clawmarchy-variant script: executable, validates input, copies files, runs omarchy-theme-set |
+| 1  | At least 3 accent variants installable alongside default purple, each with colors.toml and btop.theme | VERIFIED | 5 variants (sakura, ocean, tide, ember, moss) + yoru restore; each directory has 9 config files |
+| 2  | Every accent variant passes WCAG 4.5:1 contrast against #000000 | VERIFIED | Computed ratios (prior verification): yoru 4.72, sakura 7.52, ocean 6.16, tide 8.71, ember 7.53, moss 7.65 — all exceed 4.5:1 |
+| 3  | Wallpaper collection contains 5 variant-paired anime wallpapers (accepted deviation, formally aligned) | VERIFIED | backgrounds/ has 5 PNGs (1-sakura through 5-moss); REQUIREMENTS.md ASST-01 and ROADMAP.md SC3 both corrected to "5 variant-paired" |
+| 4  | Variant installation is documented with clear instructions | VERIFIED | README.md has Accent Variants section (line 25): full variant table with 6 names/colors, `clawmarchy-variant <name>` command, `--list` reference |
+| 5  | 5 new accent variant directories exist with 9 config files each | VERIFIED | All 6 directories (5 new + yoru) confirmed; each returns exactly 9 files |
+| 6  | No leftover default purple in non-purple variant files | VERIFIED | 0 matches in sakura/ocean/tide/ember; moss has 1 intentional exception (btop.theme temp_mid, documented in 04-01-SUMMARY.md) |
+| 7  | Users can switch variants with a single command | VERIFIED | clawmarchy-variant is -rwxr-xr-x; set -euo pipefail; SCRIPT_DIR resolution; input validation; --list |
 
-**Score:** 5/7 truths verified (1 failed, 1 partial)
+**Score:** 7/7 truths verified
+
+---
+
+## Gap Closure Verification (Plan 04-03 Must-Haves)
+
+| Must-Have | Verified | Evidence |
+|-----------|----------|---------|
+| REQUIREMENTS.md ASST-01 says "5 variant-paired" | YES | Line 47: `[x] **ASST-01**: Wallpaper collection contains 5 variant-paired anime wallpapers` |
+| No "at least 10" anywhere in REQUIREMENTS.md | YES | grep returns 0 matches |
+| ROADMAP.md SC3 says "5 variant-paired" | YES | Line 74: `3. Wallpaper collection contains 5 variant-paired anime wallpapers...` |
+| No "at least 10" in ROADMAP.md Phase 4 | YES | grep returns 0 matches in Phase 4 section |
+| README.md has "## Accent Variants" section | YES | Line 25 |
+| README.md references "clawmarchy-variant" command | YES | Lines 30 and 42 |
+| README.md Features no longer says "neon purple accents" | YES | Line 18: "**6 accent variants** -- purple (default), sakura, ocean, tide, ember, and moss" |
+| README.md Credits no longer cites Wallhaven | YES | Line 56: "Wallpapers: AI-generated via Google Gemini" |
 
 ---
 
 ## Required Artifacts
 
-### Plan 04-01 Artifacts
+### Plan 04-01 Artifacts (Regression Check)
 
-| Artifact | Expected | Status | Details |
-|----------|----------|--------|---------|
-| `variants/sakura/` | Pink accent (#D4839B), 9 config files | VERIFIED | 9 files confirmed; accent present in all 9 files in all 4 formats |
-| `variants/ocean/` | Blue accent (#5B8EC9), 9 config files | VERIFIED | 9 files confirmed; accent present across all files |
-| `variants/tide/` | Teal accent (#5AB5B5), 9 config files | VERIFIED | 9 files confirmed |
-| `variants/ember/` | Orange accent (#D4895A), 9 config files | VERIFIED | 9 files confirmed |
-| `variants/moss/` | Green accent (#6EA88E), 9 config files | VERIFIED | 9 files confirmed; temp_mid exception documented |
-| `variants/yoru/` | Default purple restore point, 9 config files | VERIFIED | Byte-identical to root colors.toml and btop.theme; 23 occurrences of #7B6CBD as expected |
+| Artifact | Status | Details |
+|----------|--------|---------|
+| `variants/sakura/` (9 files) | VERIFIED | 9 files confirmed |
+| `variants/ocean/` (9 files) | VERIFIED | 9 files confirmed |
+| `variants/tide/` (9 files) | VERIFIED | 9 files confirmed |
+| `variants/ember/` (9 files) | VERIFIED | 9 files confirmed |
+| `variants/moss/` (9 files) | VERIFIED | 9 files confirmed |
+| `variants/yoru/` (9 files) | VERIFIED | 9 files confirmed |
 
-### Plan 04-02 Artifacts
+### Plan 04-02 Artifacts (Regression Check)
 
-| Artifact | Expected | Status | Details |
-|----------|----------|--------|---------|
-| `clawmarchy-variant` | Executable shell script for variant switching | VERIFIED | Executable; set -euo pipefail; SCRIPT_DIR resolution; --list; input validation; cp + omarchy-theme-set |
-| `backgrounds/1-sakura-cherry-blossoms.png` | Sakura variant wallpaper | VERIFIED | PNG 2816x1536, 7.5 MB |
-| `backgrounds/2-ocean-midnight-harbor.png` | Ocean variant wallpaper | VERIFIED | PNG 2816x1536, 7.2 MB |
-| `backgrounds/3-tide-underwater-shrine.png` | Tide variant wallpaper | VERIFIED | PNG 2816x1536, 6.9 MB |
-| `backgrounds/4-ember-lantern-festival.png` | Ember variant wallpaper | VERIFIED | PNG 2816x1536, 8.9 MB |
-| `backgrounds/5-moss-forest-shrine.png` | Moss variant wallpaper | VERIFIED | PNG 2816x1536, 9.3 MB |
-| `backgrounds/6-sakura-cherry-blossoms.png` | Sakura wallpaper (plan expected 6-10) | MISSING | User replaced originals; files are numbered 1-5, not 6-10 |
-| `backgrounds/qhd/1-sakura-cherry-blossoms.png` | Sakura QHD downscale | VERIFIED | PNG 2560x1396 (aspect-preserving from 2816x1536 source) |
-| `backgrounds/qhd/2-ocean-midnight-harbor.png` | Ocean QHD downscale | VERIFIED | PNG 2560x1396 |
-| `backgrounds/qhd/3-tide-underwater-shrine.png` | Tide QHD downscale | VERIFIED | PNG 2560x1396 |
-| `backgrounds/qhd/4-ember-lantern-festival.png` | Ember QHD downscale | VERIFIED | PNG 2560x1396 |
-| `backgrounds/qhd/5-moss-forest-shrine.png` | Moss QHD downscale | VERIFIED | PNG 2560x1396 |
+| Artifact | Status | Details |
+|----------|--------|---------|
+| `clawmarchy-variant` | VERIFIED | -rwxr-xr-x; SCRIPT_DIR; set -euo pipefail |
+| `backgrounds/1-sakura-cherry-blossoms.png` | VERIFIED | PNG 7.5 MB |
+| `backgrounds/2-ocean-midnight-harbor.png` | VERIFIED | PNG 7.2 MB |
+| `backgrounds/3-tide-underwater-shrine.png` | VERIFIED | PNG 6.9 MB |
+| `backgrounds/4-ember-lantern-festival.png` | VERIFIED | PNG 8.9 MB |
+| `backgrounds/5-moss-forest-shrine.png` | VERIFIED | PNG 9.3 MB |
+| `backgrounds/qhd/` (5 QHD PNGs) | VERIFIED | All 5 QHD downscales present |
+
+### Plan 04-03 Artifacts (Gap Closure)
+
+| Artifact | Status | Details |
+|----------|--------|---------|
+| `.planning/REQUIREMENTS.md` | VERIFIED | ASST-01 corrected; all 7 req IDs marked Complete |
+| `.planning/ROADMAP.md` | VERIFIED | SC3 corrected; Phase 4 marked completed 2026-02-19 |
+| `README.md` | VERIFIED | Accent Variants section; Features updated; Credits corrected; description updated |
 
 ---
 
@@ -93,92 +113,72 @@ human_verification:
 
 | From | To | Via | Status | Details |
 |------|----|-----|--------|---------|
-| `variants/*/colors.toml` | `colors.toml` | accent + selection_background values replaced | VERIFIED | `accent = "#D4839B"` (sakura), `#5B8EC9` (ocean), `#5AB5B5` (tide), `#D4895A` (ember), `#6EA88E` (moss) |
-| `variants/*/btop.theme` | `btop.theme` | hi_fg, selected_fg, proc_misc, cpu_box, mem_box, net_box, proc_box replaced | VERIFIED | All 7 accent-role keys confirmed per variant; Moss temp_mid intentionally kept at #7B6CBD |
-| `variants/*/hyprland.conf` | `hyprland.conf` | rgb() format replacement | VERIFIED | e.g., `rgb(D4839B)` in sakura |
-| `variants/*/hyprlock.conf` | `hyprlock.conf` | decimal RGB rgba() replacement | VERIFIED | e.g., `rgba(212,131,155, 1.0)` in sakura (3 occurrences) |
-| `variants/*/vscode.json` | `vscode.json` | alpha-appended hex (#RRGGBBAA) replacement | VERIFIED | e.g., `#D4839B40` and `#D4839B30` in sakura |
-| `clawmarchy-variant` | `variants/*` | copies variant config files to theme root | VERIFIED | Line 45: `cp "$VARIANT_DIR"/* "$SCRIPT_DIR/"` |
-| `clawmarchy-variant` | `omarchy-theme-set` | runs theme application after file copy | VERIFIED | Line 50: `omarchy-theme-set clawmarchy` |
+| `README.md Accent Variants` | `clawmarchy-variant` | documented command and --list reference | VERIFIED | Lines 30 and 42; README.md is the user-facing entry point |
+| `variants/*/colors.toml` | `colors.toml` | accent + selection_background values | VERIFIED | Prior verification; no modifications to variant files since |
+| `variants/*/btop.theme` | `btop.theme` | hi_fg, selected_fg, proc_misc, box colors | VERIFIED | Prior verification confirmed; no regressions |
+| `clawmarchy-variant` | `variants/*/` | cp from SCRIPT_DIR/variants/<name>/ | VERIFIED | Script validates input and copies from SCRIPT_DIR-relative path |
+| `REQUIREMENTS.md ASST-01` | backgrounds/ reality | definition now matches 5 wallpapers on disk | VERIFIED | "5 variant-paired" in REQUIREMENTS.md; 5 PNGs in backgrounds/ |
 
 ---
 
 ## Requirements Coverage
 
-| Requirement | Source Plan | Description | Status | Evidence |
-|-------------|-------------|-------------|--------|---------|
-| VAR-01 | 04-01 | At least 3 pre-built accent variants alongside default purple | SATISFIED | 5 variants delivered (sakura, ocean, tide, ember, moss) |
-| VAR-02 | 04-01 | Each variant includes modified colors.toml with different accent and selection_background | SATISFIED | Confirmed in all 5 non-yoru variants; accent and selection_background replaced |
-| VAR-03 | 04-01 | Each variant includes re-crafted btop.theme gradient mapping | SATISFIED | 7 accent-role keys replaced per variant; Moss temp_mid exception handled correctly |
-| VAR-04 | 04-01 | Each variant's accent passes WCAG 4.5:1 against #000000 | SATISFIED | All 6 accents verified: 4.72-8.71:1 ratios |
-| VAR-05 | 04-02 | Variant installation documented with clear instructions | PARTIAL | clawmarchy-variant --list self-documents; README.md has no mention of variant switching or the script |
-| ASST-01 | 04-02 | Wallpaper collection expanded to at least 10 curated anime wallpapers | BLOCKED | Only 5 wallpapers exist. User deliberately replaced originals rather than adding. REQUIREMENTS.md marks this [x] Complete but its own definition ("at least 10") is unmet. |
-| ASST-02 | 04-02 | New wallpapers are dark atmospheric scenes working aesthetically with any accent | HUMAN NEEDED | 5 large-filesize PNG files confirmed (7-9 MB each, 2816x1536). Visual quality requires human verification. |
+| Requirement | Description | Status | Evidence |
+|-------------|-------------|--------|---------|
+| VAR-01 | At least 3 pre-built accent variants alongside default purple | SATISFIED | 5 variants (sakura, ocean, tide, ember, moss) + yoru |
+| VAR-02 | Each variant has colors.toml with different accent/selection_background | SATISFIED | All 6 variant colors.toml files confirmed distinct (prior verification) |
+| VAR-03 | Each variant has re-crafted btop.theme gradient for the accent hue | SATISFIED | All 6 btop.theme files with 7 accent-role keys confirmed (prior verification) |
+| VAR-04 | Each variant's accent passes WCAG 4.5:1 against #000000 | SATISFIED | Minimum ratio 4.72 (yoru); all 6 pass (prior verification) |
+| VAR-05 | Variant installation documented with clear instructions | SATISFIED | README.md Accent Variants section; --list self-documents; commit e5eae99 |
+| ASST-01 | Wallpaper collection contains 5 variant-paired anime wallpapers | SATISFIED | 5 PNGs in backgrounds/; REQUIREMENTS.md corrected to match; commit 68bd2c3 |
+| ASST-02 | Wallpapers are dark atmospheric scenes working with any accent | HUMAN NEEDED | 5 large PNG files confirmed (7-9 MB each, 2816x1536); visual quality requires human check |
 
----
-
-## Accepted Deviations (User-Directed)
-
-The following deviations from the plan were explicitly accepted by the user before this verification:
-
-| Deviation | Plan Said | Actual | Accepted? |
-|-----------|-----------|--------|-----------|
-| Wallpaper count | 10 (add 5 new alongside 5 originals, numbered 6-10) | 5 (replace all 5 originals with 5 new, numbered 1-5) | Yes |
-| Wallpaper resolution | 4K (3840x2160) | 2816x1536 (Gemini Pro generation limit) | Yes |
-| QHD dimensions | 2560x1440 (forced) | 2560x1396 (aspect-preserving) | Yes |
-
-These deviations are documented in 04-02-SUMMARY.md. REQUIREMENTS.md and ROADMAP.md Success Criteria have not been updated to reflect the accepted count change (ASST-01 still states "at least 10").
+All 7 requirement IDs accounted for. No orphaned requirements.
 
 ---
 
 ## Anti-Patterns Found
 
-| File | Pattern | Severity | Impact |
-|------|---------|----------|--------|
-| `README.md` | No mention of clawmarchy-variant, accent variants, or variant switching process | Warning | Users cannot discover variant switching from README; VAR-05 partially unmet |
-| `README.md` | Features section still describes "5 curated anime wallpapers — dark atmospheric scenes with purple/cyan tones" — accurate count but implies purple-only theming | Info | Outdated framing; variants are not mentioned |
-| `REQUIREMENTS.md` | ASST-01 marked `[x]` Complete but its definition ("at least 10") is unmet by 5 | Warning | Requirements tracking is inaccurate; misleads future contributors |
-
-No stub implementations, empty handlers, or placeholder code found in any variant config files or the clawmarchy-variant script.
+None. No TODO, FIXME, placeholder, stub, or empty-handler patterns found in any of the 3 files modified by plan 04-03 or any previously verified artifact.
 
 ---
 
 ## Human Verification Required
 
+These two items cannot be resolved programmatically. Automated checks passed for all other truths.
+
 ### 1. Wallpaper Visual Quality
 
-**Test:** Open each of the 5 wallpaper files in an image viewer:
+**Test:** Open each of the 5 PNG wallpapers in an image viewer:
 - `backgrounds/1-sakura-cherry-blossoms.png`
 - `backgrounds/2-ocean-midnight-harbor.png`
 - `backgrounds/3-tide-underwater-shrine.png`
 - `backgrounds/4-ember-lantern-festival.png`
 - `backgrounds/5-moss-forest-shrine.png`
 
-**Expected:** Each image is a dark atmospheric anime scene. 70-80% of the image area is near-black or very dark. Accent tones (pink, blue, teal, orange, green respectively) are present but subtle — lantern glow, water reflections, bioluminescence, etc. No watermarks, text overlays, or AI generation artifacts. Art style consistent with anime illustration aesthetic.
+**Expected:** Each image is a dark atmospheric anime scene. 70-80% of the image area is near-black or very dark. Accent tones (pink, blue, teal, orange, green respectively) are present but subtle — lantern glow, water reflections, etc. No watermarks, text overlays, or visible AI generation artifacts. Art style consistent with anime illustration aesthetic.
 
 **Why human:** PNG pixel analysis cannot determine style, tone distribution, or aesthetic quality.
 
-### 2. Variant Switching End-to-End (on live Omarchy install)
+### 2. Variant Switching End-to-End (live Omarchy install)
 
-**Test:** From an Omarchy installation with Clawmarchy installed at `~/.config/omarchy/themes/clawmarchy/`, run: `clawmarchy-variant sakura`
+**Test:** From an Omarchy installation with Clawmarchy installed at `~/.config/omarchy/themes/clawmarchy/`, run `clawmarchy-variant sakura`.
 
-**Expected:** Files from `variants/sakura/` are copied to the theme root. `omarchy-theme-set clawmarchy` runs and applies the sakura accent across the desktop (Waybar, Hyprland borders, Walker, btop, etc.). No errors.
+**Expected:** Files from `variants/sakura/` are copied to the theme root. `omarchy-theme-set clawmarchy` runs and applies the sakura accent across the desktop (Hyprland borders, Waybar, Walker, btop, etc.). No errors.
 
-**Why human:** SCRIPT_DIR dirname resolution works correctly only in a live install path; cannot test omarchy-theme-set in isolation.
-
----
-
-## Gaps Summary
-
-Two gaps block full goal achievement:
-
-**Gap 1 — Wallpaper count (ASST-01):** The plan called for 10 wallpapers; 5 exist. The user deliberately replaced the original 5 with 5 new Gemini-generated ones. The core value (dark atmospheric anime wallpapers paired to each variant) is satisfied. The gap is a count mismatch between the requirement as written and what was delivered. Resolution options: (a) restore/add 5 more wallpapers to reach 10, or (b) update REQUIREMENTS.md and ROADMAP.md to formally reflect the accepted deviation (change "at least 10" to "5 variant-paired"). The second option requires only documentation changes.
-
-**Gap 2 — Variant documentation in README (VAR-05 partial):** The clawmarchy-variant script has a --list mode and inline usage text, which is functional self-documentation. However, VAR-05 requires "documented with clear instructions" and the README — the primary user-facing entry point — has no mention of accent variants or the switching script. A user following only the README cannot discover this feature. This is a small, bounded fix: add an "Accent Variants" section to README.md.
-
-Both gaps are lightweight to close. Gap 2 in particular is a 10-line README addition. Gap 1 requires a scope decision from the user.
+**Why human:** SCRIPT_DIR dirname resolution requires live execution in a real Omarchy install path where the script is on $PATH.
 
 ---
 
-_Verified: 2026-02-19T20:30:00Z_
+## Commits Verified
+
+| Commit | Description | Verified |
+|--------|-------------|---------|
+| `68bd2c3` | docs(04-03): align wallpaper count with accepted 5-wallpaper deviation | YES — present in git log |
+| `e5eae99` | docs(04-03): add Accent Variants section and update README for variants | YES — present in git log |
+
+---
+
+_Verified: 2026-02-19T21:35:00Z_
 _Verifier: Claude (gsd-verifier)_
+_Re-verification: Yes — after plan 04-03 gap closure_
