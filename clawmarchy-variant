@@ -1,0 +1,52 @@
+#!/bin/bash
+set -euo pipefail
+
+SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
+
+show_usage() {
+    cat <<'EOF'
+Available variants:
+  yoru    - Muted blue-violet (default)
+  sakura  - Cherry blossom pink
+  ocean   - Deep sea blue
+  tide    - Coastal teal
+  ember   - Lantern warm orange
+  moss    - Forest green
+
+Usage: clawmarchy-variant <name>
+EOF
+}
+
+VALID_VARIANTS="yoru sakura ocean tide ember moss"
+
+if [[ $# -eq 0 ]] || [[ "$1" == "--list" ]]; then
+    show_usage
+    exit 0
+fi
+
+VARIANT="$1"
+
+# Validate variant name
+if ! echo "$VALID_VARIANTS" | grep -qw "$VARIANT"; then
+    echo "Error: Unknown variant '$VARIANT'" >&2
+    echo "Run 'clawmarchy-variant --list' to see available variants." >&2
+    exit 1
+fi
+
+VARIANT_DIR="$SCRIPT_DIR/variants/$VARIANT"
+
+# Verify variant directory exists
+if [[ ! -d "$VARIANT_DIR" ]]; then
+    echo "Error: Variant directory not found: $VARIANT_DIR" >&2
+    exit 1
+fi
+
+# Copy all variant config files to theme root
+cp "$VARIANT_DIR"/* "$SCRIPT_DIR/"
+
+echo "Switched to variant: $VARIANT"
+
+# Apply the theme
+omarchy-theme-set clawmarchy
+
+echo "Theme applied. Reload Waybar and reopen apps to see changes."
