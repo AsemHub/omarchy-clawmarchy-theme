@@ -82,7 +82,7 @@ Recent decisions affecting current work:
 
 ### Pending Todos
 
-None yet.
+1. Replace watermarked wallpapers with clean high-quality versions (.planning/todos/pending/2026-02-19-replace-watermarked-wallpapers-with-clean-high-quality-versions.md)
 
 ### Blockers/Concerns
 
