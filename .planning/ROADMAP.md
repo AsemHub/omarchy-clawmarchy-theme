@@ -78,7 +78,7 @@ Plans:
 Plans:
 - [x] 04-01-PLAN.md — Generate variant config files (5 accents + yoru restore) with WCAG contrast verification
 - [x] 04-02-PLAN.md — Variant switching script and wallpaper collection expansion
-- [ ] 04-03-PLAN.md — Gap closure: align wallpaper count docs and add Accent Variants section to README
+- [x] 04-03-PLAN.md — Gap closure: align wallpaper count docs and add Accent Variants section to README
 
 ### Phase 5: Documentation and Preview
 **Goal**: Users can understand, install, troubleshoot, and customize the theme through comprehensive documentation, and the preview screenshot reflects the fully themed desktop
@@ -105,5 +105,5 @@ Phases execute in numeric order: 1 -> 2 -> 3 -> 4 -> 5
 | 1. Hyprland Foundation Fix | 0/1 | Complete    | 2026-02-18 |
 | 2. Desktop Component Coverage | 3/3 | Complete | 2026-02-18 |
 | 3. Color System Traceability | 0/2 | Complete    | 2026-02-18 |
-| 4. Accent Variants and Wallpapers | 2/2 | Complete | 2026-02-19 |
+| 4. Accent Variants and Wallpapers | 3/3 | Complete | 2026-02-19 |
 | 5. Documentation and Preview | 0/? | Not started | - |
