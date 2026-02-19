@@ -5,23 +5,23 @@
 See: .planning/PROJECT.md (updated 2026-02-18)
 
 **Core value:** Every visible element on an Omarchy desktop is consistently themed with AMOLED true black and the user's chosen accent color -- no gray wash, no mismatched apps, no manual config editing.
-**Current focus:** Phase 4: Accent Variants and Wallpapers
+**Current focus:** Phase 5: Documentation and Preview
 
 ## Current Position
 
-Phase: 4 of 5 (Accent Variants and Wallpapers) -- PHASE COMPLETE
-Plan: 3 of 3 in current phase (all plans complete)
-Status: Phase 04 complete -- ready for Phase 05
-Last activity: 2026-02-19 -- Completed 04-03 gap closure (docs alignment + README variants)
+Phase: 5 of 5 (Documentation and Preview)
+Plan: 1 of 2 in current phase (05-01 complete)
+Status: Executing Phase 05 -- 05-01 README documentation complete
+Last activity: 2026-02-19 -- Completed 05-01 README documentation (TOC, components, customization, troubleshooting, compatibility)
 
-Progress: [########..] 80%
+Progress: [#########.] 90%
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 9
+- Total plans completed: 10
 - Average duration: 2min
-- Total execution time: 0.29 hours
+- Total execution time: 0.32 hours
 
 **By Phase:**
 
@@ -31,14 +31,16 @@ Progress: [########..] 80%
 | 02-desktop-component-coverage | 3 | 3min | 1min |
 | 03-color-system-traceability | 2 | 6min | 3min |
 | 04-accent-variants-and-wallpapers | 3 | 8min | 2.7min |
+| 05-documentation-and-preview | 1 | 2min | 2min |
 
 **Recent Trend:**
-- Last 5 plans: 04-03 (1min), 04-02 (4min), 04-01 (3min), 03-02 (2min), 03-01 (4min)
+- Last 5 plans: 05-01 (2min), 04-03 (1min), 04-02 (4min), 04-01 (3min), 03-02 (2min)
 - Trend: -
 
 *Updated after each plan completion*
 | Phase 04 P02 | 4min | 3 tasks | 11 files |
 | Phase 04 P03 | 1min | 2 tasks | 3 files |
+| Phase 05 P01 | 2min | 2 tasks | 1 files |
 
 ## Accumulated Context
 
@@ -70,6 +72,10 @@ Recent decisions affecting current work:
 - Wallpaper replacement strategy: 5 variant-paired anime scenes replace originals (user choice) (04-02)
 - Aspect-preserving QHD downscale to 2560x1396 to avoid distortion from non-16:9 source (04-02)
 - clawmarchy-variant script copies variant dir to root then runs omarchy-theme-set (04-02)
+- Hybrid component docs: file tree first for visual overview, then 12-row table for details (05-01)
+- COLORS.md referenced (not inlined) for detailed color mapping -- avoids README bloat (05-01)
+- 5 troubleshooting issues documented (3 required + 2 recommended from research) (05-01)
+- Customization scoped to pre-built variants only -- no manual hex editing (v2/CLI-01 scope) (05-01)
 
 ### Pending Todos
 
@@ -83,5 +89,5 @@ None yet.
 ## Session Continuity
 
 Last session: 2026-02-19
-Stopped at: Completed 04-03-PLAN.md (Phase 04 fully complete with gap closure)
-Resume file: .planning/phases/04-accent-variants-and-wallpapers/04-03-SUMMARY.md
+Stopped at: Completed 05-01-PLAN.md (README documentation with TOC, components, customization, troubleshooting, compatibility)
+Resume file: .planning/phases/05-documentation-and-preview/05-01-SUMMARY.md

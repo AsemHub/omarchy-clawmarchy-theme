@@ -50,10 +50,10 @@ Requirements for initial release. Each maps to roadmap phases.
 
 ### Documentation
 
-- [ ] **DOC-01**: README documents all themed components with screenshots or descriptions
-- [ ] **DOC-02**: README includes troubleshooting section for common issues (opacity, fonts, icon themes)
-- [ ] **DOC-03**: README includes customization guide explaining how to change accent colors and wallpapers
-- [ ] **DOC-04**: README documents compatibility requirements (Hyprland, Omarchy version, required packages)
+- [x] **DOC-01**: README documents all themed components with screenshots or descriptions
+- [x] **DOC-02**: README includes troubleshooting section for common issues (opacity, fonts, icon themes)
+- [x] **DOC-03**: README includes customization guide explaining how to change accent colors and wallpapers
+- [x] **DOC-04**: README documents compatibility requirements (Hyprland, Omarchy version, required packages)
 
 ## v2 Requirements
 
@@ -122,10 +122,10 @@ Which phases cover which requirements. Updated during roadmap creation.
 | ASST-01 | Phase 4 | Complete |
 | ASST-02 | Phase 4 | Complete |
 | ASST-03 | Phase 5 | Pending |
-| DOC-01 | Phase 5 | Pending |
-| DOC-02 | Phase 5 | Pending |
-| DOC-03 | Phase 5 | Pending |
-| DOC-04 | Phase 5 | Pending |
+| DOC-01 | Phase 5 | Complete |
+| DOC-02 | Phase 5 | Complete |
+| DOC-03 | Phase 5 | Complete |
+| DOC-04 | Phase 5 | Complete |
 
 **Coverage:**
 - v1 requirements: 27 total
