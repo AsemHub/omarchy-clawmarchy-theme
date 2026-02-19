@@ -71,7 +71,7 @@ Plans:
 **Success Criteria** (what must be TRUE):
   1. At least 3 accent variants (e.g., blue, teal, rose) are installable alongside the default purple, each with its own colors.toml and btop.theme gradient mapping
   2. Every accent variant passes WCAG 4.5:1 contrast ratio against #000000 background
-  3. Wallpaper collection contains at least 10 curated anime wallpapers that are dark atmospheric scenes working aesthetically with any accent color (not tied to purple)
+  3. Wallpaper collection contains 5 variant-paired anime wallpapers that are dark atmospheric scenes working aesthetically with any accent color (not tied to purple)
   4. Variant installation follows a documented, straightforward process
 **Plans**: 3 plans
 

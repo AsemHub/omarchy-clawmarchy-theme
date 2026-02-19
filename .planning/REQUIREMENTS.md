@@ -44,7 +44,7 @@ Requirements for initial release. Each maps to roadmap phases.
 
 ### Assets
 
-- [x] **ASST-01**: Wallpaper collection expanded to at least 10 curated anime wallpapers
+- [x] **ASST-01**: Wallpaper collection contains 5 variant-paired anime wallpapers
 - [x] **ASST-02**: New wallpapers are dark atmospheric scenes that work aesthetically with any accent color variant (not tied to purple)
 - [ ] **ASST-03**: Preview screenshot (preview.png) updated to reflect full themed desktop with new components
 
@@ -134,4 +134,4 @@ Which phases cover which requirements. Updated during roadmap creation.
 
 ---
 *Requirements defined: 2026-02-18*
-*Last updated: 2026-02-18 after roadmap creation*
+*Last updated: 2026-02-19 after gap closure (04-03)*
