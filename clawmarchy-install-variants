@@ -1,0 +1,81 @@
+#!/bin/bash
+set -euo pipefail
+
+# Creates separate theme entries for each clawmarchy variant so they
+# show up individually in the Omarchy style > theme menu.
+#
+# Each variant gets its own directory in ~/.config/omarchy/themes/ with:
+#   - Variant-specific configs (accent colors, component styling)
+#   - Shared files (chromium, icons, neovim) symlinked from base theme
+#   - Paired wallpaper in backgrounds/
+
+SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
+THEMES_DIR="$HOME/.config/omarchy/themes"
+BASE_THEME="clawmarchy"
+
+# Variant -> paired wallpaper mapping
+declare -A WALLPAPERS=(
+  [sakura]="1-sakura-cherry-blossoms.png"
+  [ocean]="2-ocean-midnight-harbor.png"
+  [tide]="3-tide-underwater-shrine.png"
+  [ember]="4-ember-lantern-festival.png"
+  [moss]="5-moss-forest-shrine.png"
+)
+
+# Shared files that are the same across all variants
+SHARED_FILES=(chromium.theme icons.theme neovim.lua)
+
+VARIANTS="yoru sakura ocean tide ember moss"
+
+echo "Installing clawmarchy variant themes..."
+echo ""
+
+# Ensure base theme is installed
+if [[ ! -d "$THEMES_DIR/$BASE_THEME" ]]; then
+  echo "Base theme not found. Installing..."
+  mkdir -p "$THEMES_DIR"
+  ln -sf "$SCRIPT_DIR" "$THEMES_DIR/$BASE_THEME"
+fi
+
+for variant in $VARIANTS; do
+  VARIANT_THEME="$THEMES_DIR/$BASE_THEME-$variant"
+
+  # Clean previous install
+  rm -rf "$VARIANT_THEME"
+  mkdir -p "$VARIANT_THEME"
+
+  # Copy variant-specific configs (these override template-generated ones)
+  cp "$SCRIPT_DIR/variants/$variant/"* "$VARIANT_THEME/"
+
+  # Symlink shared files from repo root
+  for shared in "${SHARED_FILES[@]}"; do
+    if [[ -f "$SCRIPT_DIR/$shared" ]]; then
+      ln -sf "$SCRIPT_DIR/$shared" "$VARIANT_THEME/$shared"
+    fi
+  done
+
+  # Set up backgrounds directory with paired wallpaper
+  mkdir -p "$VARIANT_THEME/backgrounds"
+
+  if [[ "$variant" == "yoru" ]]; then
+    # Yoru is the default — gets all wallpapers
+    for bg in "$SCRIPT_DIR/backgrounds/"*.png; do
+      ln -sf "$bg" "$VARIANT_THEME/backgrounds/$(basename "$bg")"
+    done
+  else
+    # Each variant gets only its paired wallpaper
+    PAIRED="${WALLPAPERS[$variant]}"
+    if [[ -f "$SCRIPT_DIR/backgrounds/$PAIRED" ]]; then
+      ln -sf "$SCRIPT_DIR/backgrounds/$PAIRED" "$VARIANT_THEME/backgrounds/$PAIRED"
+    fi
+  fi
+
+  echo "  ✓ $BASE_THEME-$variant"
+done
+
+echo ""
+echo "Done! 6 variant themes installed."
+echo "Switch via: Style > Theme in the app launcher."
+echo ""
+echo "To remove variant themes:"
+echo "  rm -rf ~/.config/omarchy/themes/clawmarchy-*"
